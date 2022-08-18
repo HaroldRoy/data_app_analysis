@@ -14,6 +14,8 @@ if file:
 
     st.pyplot(fig1)
 
+    st.markdown("---")
+
     fig2 = plt.figure(figsize=(10, 4))
     sns.boxplot(x='Pclass',
                 y='Age',
@@ -21,3 +23,10 @@ if file:
     )
 
     st.pyplot(fig2)
+
+    st.markdown("---")
+    
+    fig3 = plt.figure(figsize=(10, 4))
+    sns.heatmap(df.corr(), annot=True)
+
+    st.pyplot(fig3)
