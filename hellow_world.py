@@ -13,3 +13,11 @@ if file:
     sns.countplot(x='Pclass', data=df)
 
     st.pyplot(fig1)
+
+    fig2 = plt.figure(figsize=(10, 4))
+    sns.boxplot(x='Pclass',
+                y='Age',
+                data = df
+    )
+
+    st.pyplot(fig2)
